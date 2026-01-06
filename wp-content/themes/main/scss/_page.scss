@@ -1,0 +1,156 @@
+/* 変数セット
+------------------------------------------------------------ */
+@use "common" as *;
+
+
+/*
+============================================================
+
+page
+
+============================================================
+*/
+
+
+/* ibt
+------------------------------------------------------------ */
+.ibt {
+
+  //-page
+  &-page {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    background: $w0;
+    padding: 0 0 40px;
+    @media screen and (min-width: $brake_lg+1) {
+      padding: 0 0 80px;
+    }
+    &-inr {
+      display: block;
+      margin: 0 auto;
+      @media screen and (max-width: $brake_md) {
+        
+      }
+    }
+    
+    //-title
+    &-title {
+      font-weight: 500;
+      box-sizing: border-box;
+      width: 100%;
+      background: $f5;
+      border-bottom: 1px solid $ee;
+      font-size: 20px;
+      margin: 0 0 0;
+      @media screen and (min-width: $brake_md+1) {
+        font-size: 28px;
+        margin: 0 0 0;
+      }
+      &-inr {
+        display: block;
+        margin: 0 auto;
+        max-width: 1280px;
+        padding: 32px 28px;
+        @media screen and (min-width: $brake_md+1) {
+          padding: 40px 40px;
+        }
+        text-align: left;
+      }
+    }
+    
+    //-main
+    &-main {
+      width: 100%;
+      display: block;
+      padding: 40px 0 0;
+
+      //-inr
+      &-inr {
+        display: block;
+        margin: 0 auto;
+        max-width: 1280px;
+        padding: 0 24px 0;
+        font-feature-settings: "palt";
+      }
+
+      .has-text-align {
+        &-right {
+          text-align: right;
+        }
+        &-left {
+          text-align: left;
+        }
+      }
+
+      h2 {
+        font-size: 24px;
+        font-weight: 700;
+        text-align: justify;
+        word-break: break-all;
+        margin: 32px 0 16px;
+        @media screen and (min-width: $brake_md+1) {
+          font-size: 32px;
+        }
+      }
+      h3 {
+        font-size: 24px;
+        font-weight: 700;
+        text-align: justify;
+        word-break: break-all;
+        margin: 0 0 8px;
+        color: $b9;
+      }
+      h4 {
+        font-size: 20px;
+        font-weight: 700;
+        text-align: justify;
+        word-break: break-all;
+        margin: 0 0 8px;
+        color: $b7;
+      }
+
+      hr {
+        margin: 0 0 64px 0;
+        padding: 24px 0 0;
+        border: none;
+        border-bottom: 1px solid $d9;
+      }
+      img {
+        display: block;
+        box-sizing: border-box;
+        //width: 100%!important;
+        height: auto!important;
+        margin: 0 0 32px 0;
+      }
+      
+      p {
+        display: block;
+        margin: 0 0 24px 0;
+        font-size: 16px;
+        line-height: 1.8;
+      }
+
+      table {
+        border: 1px solid $b8;
+        margin: 0 0 24px;
+        tr {
+
+        }
+        th, td {
+          border: 1px solid $b8;
+          padding: 24px;
+        }
+        th {
+          
+        }
+        td {
+          
+        }
+      }
+
+    }
+
+  }
+
+}

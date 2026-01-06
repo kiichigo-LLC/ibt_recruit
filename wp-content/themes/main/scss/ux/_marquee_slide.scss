@@ -1,0 +1,43 @@
+/* 変数セット
+------------------------------------------------------------ */
+@use "../common" as *;
+
+
+/*
+============================================================
+
+マーキースライド
+
+============================================================
+*/
+
+.marquee-slide {
+  position: relative;
+  width: 100%;
+  padding: 0 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: calc(-50vw + 50%) !important;
+  margin-right: calc(-50vw + 50%) !important;
+  width: 100vw !important;
+  img {
+    flex-shrink: 0;
+    width: 135px;
+    height: 176px;
+    object-fit: cover;
+    @media screen and (min-width: $brake_md+1) {
+      width: 184px;
+      height: 240px;
+    }
+    &.svg {
+      width: auto;
+      height: 88px;
+      margin: 0 12px;
+      @media screen and (min-width: $brake_md+1) {
+        height: 105px;
+        margin: 0 16px;
+      }
+    }
+  }
+}

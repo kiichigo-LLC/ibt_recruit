@@ -1,0 +1,80 @@
+/* 変数セット
+------------------------------------------------------------ */
+@use "../common" as *;
+
+/*swiper*/
+.swiper {
+  width: 100%;
+  height: 100%;
+
+  &-slide {
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all .4s;
+      transform: scale(94%);
+      &:hover {
+        transform: scale(100%);
+      }
+    }
+  }
+
+}
+
+.home-slider {
+  position: relative;
+  //button
+  &-button {
+    &-next, &-prev {
+      opacity: 0;
+      position: absolute;
+      bottom: 50%;
+      width: 56px;
+      height: 56px;
+      margin-bottom: -28px;
+      z-index: 10;
+      cursor: pointer;
+      background-size: 16px 16px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: $w0;
+      border-radius: 6px;
+      transition: all .4s;
+      display: none;
+      filter: drop-shadow(0 0 1px rgba($b0, .15));
+      @media screen and (min-width: $brake_xl+1) {
+        display: block;
+      }
+      &:hover {
+        background-color: $tone_clr;
+        background-image: url(../img/arrow_r_w.svg);
+      }
+      &.swiper-button-disabled {
+        opacity: 0!important;
+        cursor: auto!important;
+        pointer-events: none!important;
+      }
+    }
+    &-next {
+      background-image: url(../img/arrow_r.svg);
+      left: auto;
+      right: -16px;
+      top: auto;
+      @media screen and (min-width: $brake_md+1) {
+        right: -16px;
+      }
+    }
+    &-prev {
+      background-image: url(../img/arrow_r.svg);
+      right: auto;
+      left: -16px;
+      top: auto;
+      transform: rotate(180deg);
+      @media screen and (min-width: $brake_md+1) {
+        left: -16px;
+      }
+    }
+  }
+}

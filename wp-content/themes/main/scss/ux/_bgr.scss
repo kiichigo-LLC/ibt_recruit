@@ -1,0 +1,119 @@
+/* 変数セット
+------------------------------------------------------------ */
+@use "../common" as *;
+
+
+/*
+============================================================
+
+bgr
+
+============================================================
+*/
+
+/* bgr
+------------------------------------------------------------ */
+.home {
+  .bgr {
+    span {
+      &:before {
+        background: url(../img/new/icon/bgr.svg) center no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+}
+.bgr {
+  position: absolute;
+  display: inline-block;
+  right: 24px;
+  top: 32px;
+  z-index: 1001;
+  // transform: scale(0.7);
+  // font-size: 16px;
+  // letter-spacing: 1px;
+  // font-family: $gwf;
+  //background: rgba($w0, .6);
+  cursor: pointer;
+  @media screen and (min-width: $brake_md+1) {
+    display: none;
+  }
+  span {
+    transition: all .4s;
+    display: block;
+    &:before {
+      transition: all .4s;
+      content: "";
+      // background: url(../img/bgr.svg) no-repeat;
+      // background-size: cover;
+      width: 24px;
+      height: 18px;
+      display: inline-block;
+      padding: 0 0 0 0;
+      //background: $tone_clr;
+      //border-radius: 4px;
+      background: url(../img/new/icon/bgr_b.svg) center no-repeat;
+      background-size: contain;
+      @media screen and (min-width: 1160px) {
+        display: none;
+        font-size: 16px;
+      }
+    }
+    &:after {
+      content: "";
+      transition: all .4s;
+      display: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+      background: url(../img/new/icon/x.svg?1) center no-repeat;
+      background-size: contain;
+      //filter: drop-shadow(1px 1px 1px rgba($b0, .4));
+    }
+  }
+  &:hover {
+    span {
+    }
+  }
+  // &.top {
+  //   //transform: rotate(90deg);
+  //   // right: 0;
+  //   top: 22px;
+  //   background: none;
+  //   span {
+  //     display: inline-block;
+  //     &:before {
+  //       font-size: 14px;
+  //       background: none;
+  //       text-shadow: 0 0 2px $b0;
+  //       color: rgba($w0, .8);
+  //       // background-image: none;
+  //       // background-color: rgba($w0, .6);
+  //       //padding: 8px 0;
+  //       @media screen and (min-width: $brake_md+1) {
+  //         font-size: 16px;
+  //       }
+  //     }
+  //   }
+  //   &.active {
+  //     right: 20px;
+  //     top: 20px;
+  //   }
+  // }
+  &.active {
+    position: absolute;
+    right: 24px;
+    top: 32px;
+    color: $w0;
+    background: none;
+    transform: rotate(0);
+    span {
+      &:before {
+        display: none;
+      }
+      &:after {
+        display: inline-block;
+      }
+    }
+  }
+}

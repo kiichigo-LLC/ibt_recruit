@@ -1,0 +1,197 @@
+/* 変数セット
+------------------------------------------------------------ */
+@use "../common" as *;
+
+
+/*
+============================================================
+
+plusnav
+
+============================================================
+*/
+
+.plusnav {
+  //padding-right: 40px;
+  @media screen and (min-width: $brake_md+1) {
+    padding-right: 0;
+  }
+  & > ul > li > a {
+    color: $main_clr !important;
+    font-size: 18px;
+    //mix-blend-mode: overlay;
+    //text-shadow: 1px 1px 1px rgba($b0, 0.2);
+    font-size: 24px;
+    @media screen and (min-width: 1160px) {
+      color: $b0 !important;
+      font-size: 18px;
+    }
+  }
+  &.home {
+    & > ul > li > a {
+      color: $main_clr !important;
+      @media screen and (min-width: 1160px) {
+        color: $w0 !important;
+      }
+    }
+    .plusnav-box {
+      @media screen and (min-width: 1160px) {
+        border-left: 1px solid $w0;
+      }
+      &-sec {
+        &-ttl {
+          color: $b0;
+          @media screen and (min-width: 1160px) {
+            color: $w0;
+          }
+        }
+        & > ul > li > a {
+          color: $b0 !important;
+          @media screen and (min-width: 1160px) {
+            color: $w0 !important;
+          }
+          &.child {
+            &:before {
+              background: $b0;
+              @media screen and (min-width: 1160px) {
+                background: $w0;
+              }
+            }
+          }
+          small {
+            color: $b0;
+            border: 1px solid $b0;
+            @media screen and (min-width: 1160px) {
+              color: $w0;
+              border: 1px solid $w0;
+            }
+          }
+        }
+      }
+    }
+  }
+  & > ul > li:hover .plusnav-box {
+    opacity: 1;
+    @media screen and (min-width: $brake_md+1) {
+      max-height: 9999px;
+      opacity: 1;
+    }
+  }
+  > ul > li {
+    position: relative;
+  }
+  &-box {
+    z-index: 10;
+    font-size: 14px;
+    line-height: 1;
+    margin: 0 0 0 0;
+    padding: 8px 0 20px 8px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    color: $w0;
+    @media screen and (min-width: 1160px) {
+      transition: all .2s ease-in;
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      width: 100%;
+      top: 32px;
+      left: 6px;
+      position: absolute;
+      min-width: 320px;
+      padding: 16px 16px 8px 16px;
+      margin: 0;
+      border-left: 1px solid $b0;
+      gap: 24px;
+      backdrop-filter: blur(6px);
+    }
+
+    &-sec {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      box-sizing: border-box;
+      margin: 0 0 0 0;
+      &:last-child {
+        margin: 0 0 0 0;
+      }
+
+      &-ttl {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1;
+        color: $b0;
+        margin-left: 0;
+        @media screen and (min-width: 1160px) {
+          font-size: 14px;
+          margin-left: -8px;
+        }
+        a {
+          opacity: 1;
+          &:hover {
+            opacity: 0.6;
+          }
+          span {
+            &.en {
+              font-size: 15px;
+            }
+          }
+        }
+      }
+
+      & > ul {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        @media screen and (min-width: 1160px) {
+          gap: 16px;
+        }
+        & > li {
+          margin: 0 0 0 0;
+          font-size: 16px;
+          line-height: 1;
+          padding: 0 0 0 0;
+          & > a {
+            color: $b0 !important;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            @media screen and (min-width: 1160px) {
+            }
+            &:hover {
+              opacity: 0.6;
+            }
+            &.child {
+              &:before {
+                content: "";
+                display: inline-block;
+                width: 8px;
+                height: 1px;
+                background: $b0;
+              }
+            }
+            span {
+              display: inline-flex;
+              align-items: center;
+              gap: 6px;
+            }
+            small {
+              font-size: 12px;
+              font-weight: 500;
+              margin: 0 0 0 0;
+              line-height: 1;
+              height: 100%;
+              padding: 2px 4px;
+              border-radius: 2px;
+              color: $b0;
+              box-sizing: border-box;
+              border: 1px solid $b0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

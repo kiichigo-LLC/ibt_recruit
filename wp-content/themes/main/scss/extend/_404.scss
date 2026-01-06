@@ -1,0 +1,49 @@
+/* 変数セット
+------------------------------------------------------------ */
+@use "../common" as *;
+
+/*
+============================================================
+
+404ページ
+
+============================================================
+*/
+
+
+/* ibt-404
+------------------------------------------------------------ */
+.ibt-404 {
+  display: block;
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+  overflow-x: hidden;
+  height: 100%;
+  @media screen and (min-width: $brake_md+1) {
+    padding: 0 0 0 0;
+  }
+  &-inr {
+    display: block;
+    padding: 0 16px 0;
+    margin: 0 auto 0;
+    box-sizing: border-box;
+    background: url(../img/404.png) center no-repeat;
+    background-size: 80%;
+    aspect-ratio: 2048/1200;
+    @media screen and (min-width: $brake_xl+1) {
+      padding: 0 0 0 0;
+      width: 1200px;
+    }
+  }
+  &-title {
+    text-align: left;
+  }
+  &-img {
+    img {
+      width: 100%;
+    }
+  }
+  &-text {
+    text-align: right;
+  }
+}

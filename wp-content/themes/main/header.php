@@ -49,6 +49,9 @@ ini_set('display_errors', "On");
 		
 		<?php 
 
+			// 変数を読み込む
+			include(get_template_directory() . '/_utils/_var.php');
+
 			//現在のURL取得
 			$http = is_ssl() ? 'https' : 'http';
 			$nowurl = $http . '://' . $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"];
@@ -72,7 +75,11 @@ ini_set('display_errors', "On");
 				if (has_post_thumbnail()) { //アイキャッチ画像を設定している場合
 					$img_id = get_post_thumbnail_id ();
 					$img_url = wp_get_attachment_image_src ($img_id, true);
+					if ($img_url && isset($img_url[0])) {
 					$meta_ogp = $img_url[0];
+					} else {
+						$meta_ogp = get_template_directory_uri() . '/img/ogp.jpg';
+					}
 				} else { //アイキャッチ画像を設定していない場合
 					$meta_ogp = get_template_directory_uri() . '/img/ogp.jpg';
 				}
@@ -97,9 +104,6 @@ ini_set('display_errors', "On");
 				$meta_title  = $meta_sitetitle;
 				$meta_description  = $meta_sitedescription;
 			}
-
-			//変数受け渡し
-			include('_common/_var.php');
 
 		?>
 
@@ -154,17 +158,9 @@ ini_set('display_errors', "On");
 		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/swiper.min.css">
 
 		<!-- スタイル -->
-		<?php if (has_category('recruit')) : ?>
-			<link rel="stylesheet" href="http://localhost/ibt/wp/wp-content/themes/main/css/newstyle.css?v<?php echo $vcash ?>">
-		<?php else : ?>
-			<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/newstyle.css?v<?php echo $vcash ?>">
-		<?php endif; ?>
-		<!-- <?php $page_title = get_the_title(); ?>
-		<?php if( $page_title === 'Company Info' || $page_title === '会社概要' ) : ?>
-			<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css?v<?php echo $vcash ?>">
-		<?php else : ?>
-			<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/newstyle.css?v<?php echo $vcash ?>">
-		<?php endif; ?> -->
+		<link rel="stylesheet" href="http://localhost/ibt/wp/wp-content/themes/main/css/newstyle.css?v<?php echo $vcash ?>">
+		<link rel="stylesheet" href="http://localhost/ibt/recruit/wp-content/themes/main/public/css/style.css?v<?php echo $vcash ?>">
+		<!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/public/css/style.css?v<?php echo $vcash ?>"> -->
 		
 		<?php //wp_head(); ?>
 
@@ -193,7 +189,7 @@ ini_set('display_errors', "On");
 			
 			<header>
 
-				<?php include(get_template_directory() . '/__renewal/header.php'); ?>
+				<?php include(get_template_directory() . '/_common/header.php'); ?>
 
 			</header>
 

@@ -3,7 +3,7 @@
 	get_header();
 
 	// SCF変数の読み込み
-	include(get_template_directory() . '/utils/_scf.php');
+	include(get_template_directory() . '/_utils/_scf.php');
 
 	$thumbnail_id = get_post_thumbnail_id();
 	$eye_img = wp_get_attachment_image_src( $thumbnail_id , 'large' );
@@ -21,7 +21,7 @@
 
 <?php while( have_posts() ) : the_post(); ?>
 
-<?php include(get_template_directory() . '/_page/parts/recruit/svg-animation.php'); ?>
+<?php include(get_template_directory() . '/_components/svg-animation.php'); ?>
 
 <div class="ibt-contents recruit">
   <div class="ibt-contents-inr recruit-member_interview-inr">

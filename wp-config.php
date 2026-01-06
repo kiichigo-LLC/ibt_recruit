@@ -70,17 +70,11 @@ define( 'WP_CACHE_KEY_SALT', '?JK/f;mtg)27v49Oe)T~rmEB2TC`x8tg[&CO37%XjzBljD$D|S
  */
 $table_prefix = 'wp_';
 
-// SSL証明書設定前の一時的な対応：HTTPを強制
-$_SERVER['HTTPS'] = 'off';
-define('FORCE_SSL_LOGIN', false);
-define('FORCE_SSL_ADMIN', false);
-
-// 元の設定（SSL証明書設定後にコメントアウトを外してください）
-// if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === "https") {
-//     $_SERVER['HTTPS'] = 'on';
-//     define('FORCE_SSL_LOGIN', true);
-//     define('FORCE_SSL_ADMIN', true);
-// }
+if (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === "https") {
+    $_SERVER['HTTPS'] = 'on';
+    define('FORCE_SSL_LOGIN', true);
+    define('FORCE_SSL_ADMIN', true);
+}
 
 
 /* Add any custom values between this line and the "stop editing" line. */

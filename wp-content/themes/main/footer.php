@@ -1,29 +1,23 @@
 <?php
-
-//変数受け渡し
-include('_common/_var.php');
-
+  // 変数を読み込む
+  include(get_template_directory() . '/_utils/_var.php');
 ?>
 
 </main>
 
 <footer>
 
-  <?php include(get_template_directory() . '/__renewal/footer.php'); ?>
+  <?php include(get_template_directory() . '/_common/footer.php'); ?>
 
 </footer>
 
 </div>
 
 <?php if (has_category('recruit')) : ?>
-  <script src="http://localhost/ibt/wp/wp-content/themes/main/js/script.js?v<?php echo $vcash ?>" defer></script>
+  <script src="http://localhost/ibt/recruit/wp-content/themes/main/public/js/script.js?v<?php echo $vcash ?>" defer></script>
 <?php else : ?>
-  <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/script.min.js?v<?php echo $vcash ?>" defer></script>
+  <script src="<?php echo get_stylesheet_directory_uri(); ?>/public/js/script.js?v<?php echo $vcash ?>" defer></script>
 <?php endif; ?>
-
-<!-- Start of HubSpot Embed Code -->
-<script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/44737757.js"></script>
-<!-- End of HubSpot Embed Code -->
 
 </body>
 

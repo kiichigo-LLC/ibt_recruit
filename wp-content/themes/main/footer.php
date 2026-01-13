@@ -13,10 +13,11 @@
 
 </div>
 
+<!-- JavaScript Modules -->
 <?php if (has_category('recruit')) : ?>
-  <script src="http://localhost/ibt/recruit/wp-content/themes/main/public/js/script.js?v<?php echo $vcash ?>" defer></script>
+  <script type="module" src="http://localhost/ibt/recruit/wp-content/themes/main/public/js/main.js?v<?php echo $vcash ?>"></script>
 <?php else : ?>
-  <script src="<?php echo get_stylesheet_directory_uri(); ?>/public/js/script.js?v<?php echo $vcash ?>" defer></script>
+  <script type="module" src="<?php echo get_stylesheet_directory_uri(); ?>/public/js/main.js?v<?php echo $vcash ?>"></script>
 <?php endif; ?>
 
 </body>

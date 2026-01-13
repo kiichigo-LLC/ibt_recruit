@@ -1,0 +1,11 @@
+<svg width="1500" height="665" viewBox="0 0 1500 665" fill="none" xmlns="http://www.w3.org/2000/svg" class="svg-draw-animation">
+  <defs>
+    <linearGradient id="paint0_linear_recruit_{{POST_ID}}" x1="1433.05" y1="62.0428" x2="-14.8211" y2="650.539" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#CE030C"/>
+      <stop offset="0.538462" stop-color="#E08C90"/>
+      <stop offset="0.773088" stop-color="#D31821"/>
+      <stop offset="1" stop-color="white"/>
+    </linearGradient>
+  </defs>
+  <path class="draw-path" opacity="0.2" d="M1486.46 17.9609C1486.46 17.9609 728.663 553.497 663.908 482.617C618.405 430.114 816.168 274.354 761.915 233.226C670.034 172.847 12.8652 647.128 12.8652 647.128" stroke="url(#paint0_linear_recruit_{{POST_ID}})" stroke-width="44" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

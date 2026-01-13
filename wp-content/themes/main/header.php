@@ -155,11 +155,12 @@ ini_set('display_errors', "On");
 		<!-- スタイル -->
 		<link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-		<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/swiper.min.css">
+		<!-- Splide.js CSS -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
 
 		<!-- スタイル -->
 		<link rel="stylesheet" href="http://localhost/ibt/wp/wp-content/themes/main/css/newstyle.css?v<?php echo $vcash ?>">
-		<link rel="stylesheet" href="http://localhost/ibt/recruit/wp-content/themes/main/public/css/style.css?v<?php echo $vcash ?>">
+    <link rel="stylesheet" href="http://localhost/ibt/recruit/wp-content/themes/main/public/css/style.css?v<?php echo $vcash ?>">
 		<!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/public/css/style.css?v<?php echo $vcash ?>"> -->
 		
 		<?php //wp_head(); ?>
@@ -171,13 +172,6 @@ ini_set('display_errors', "On");
 			window.addEventListener("load", function(){
 				setTimeout(() => {
 					document.documentElement.classList.remove("is-loading");
-					
-					setTimeout(() => {
-						initTextAnimations();
-						initHeroClass();
-						initFadeInAnimations();
-						initLoadShow();
-					}, 100);
 				}, 200);
 			});
 		</script>

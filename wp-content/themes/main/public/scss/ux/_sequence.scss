@@ -1,0 +1,33 @@
+/* 変数セット
+------------------------------------------------------------ */
+@use "../common" as *;
+
+
+/*
+============================================================
+
+順番表示アニメーション
+
+============================================================
+*/
+
+// 順番表示アニメーション用の初期状態
+.home-sequence-1,
+.home-sequence-2,
+.home-sequence-3 {
+  opacity: 0;
+  transition: opacity 0.8s ease-out;
+}
+
+// recruit-galleryに直接適用される場合の対策
+.recruit-gallery.home-sequence-1 {
+  opacity: 0;
+}
+
+// 横から入ってくるアニメーション用の初期状態
+.home-sequence-4,
+.home-sequence-5 {
+  opacity: 0;
+  transform: translateX(-16px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}

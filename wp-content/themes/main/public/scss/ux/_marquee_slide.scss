@@ -6,37 +6,60 @@
 /*
 ============================================================
 
-マーキースライド
+マーキースライド（Splide.js使用）
 
 ============================================================
 */
 
-.marquee-slide {
-  position: relative;
-  width: 100%;
-  padding: 0 0;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-left: calc(-50vw + 50%) !important;
-  margin-right: calc(-50vw + 50%) !important;
-  width: 100vw !important;
-  img {
-    flex-shrink: 0;
-    width: 135px;
-    height: 176px;
-    object-fit: cover;
-    @media screen and (min-width: $brake_md+1) {
-      width: 184px;
-      height: 240px;
-    }
-    &.svg {
-      width: auto;
-      height: 88px;
-      margin: 0 12px;
-      @media screen and (min-width: $brake_md+1) {
-        height: 105px;
-        margin: 0 16px;
+#marquee-slide {
+  .splide__track {
+    height: 100%;
+  }
+  .splide__slide {
+    p {
+      width: 336px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      flex: auto 0 0;
+      @media (max-width: $brake_md) {
+        width: 202px;
+      }
+      &.img1 {
+        margin-top: 40px;
+        @media (max-width: $brake_md) {
+          margin-top: 24px;
+        }
+      }
+      &.img2 {
+        width: 394px;
+        margin-top: 88px;
+        @media (max-width: $brake_md) {
+          width: 234px;
+          margin-top: 48px;
+        }
+      }
+      &.img3 { 
+        align-items: flex-start;
+      }
+      &.img4 {
+        width: 464px;
+        align-items: flex-end;
+        @media (max-width: $brake_md) {
+          width: 276px;
+        }
+      }
+      &.img5 {
+        margin-top: 100px;
+        @media (max-width: $brake_md) {
+          margin-top: 60px;
+        }
+      }
+      img {
+        width: 100%;
+        height: max-content;
+        object-fit: contain;
+        border-radius: 20px;
       }
     }
   }

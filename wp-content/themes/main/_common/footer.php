@@ -136,12 +136,12 @@
           <ol>
             <li>
               <a href="<?php echo $sns_li; ?>" target="_blank">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/new/icon/li.svg" alt="LinkedIn" width="40" height="40">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/public/img/sns/li.svg" alt="LinkedIn" width="40" height="40">
               </a>
             </li>
             <li>
               <a href="<?php echo $sns_fb; ?>" target="_blank">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/new/icon/fb.svg" alt="Facebook" width="40" height="40">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/public/img/sns/fb.svg" alt="Facebook" width="40" height="40">
               </a>
             </li>
           </ol>

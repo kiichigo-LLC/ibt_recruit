@@ -5,6 +5,8 @@ import { initRecruitSvgAnimation } from './modules/recruit-svg-animation.js';
 import { initTypewriterEffect } from './modules/typewriter-effect.js';
 import { initHomeSequence } from './modules/home-sequence.js';
 import { initSplide } from './modules/splide-init.js';
+import { initBenefitsFadeIn } from './modules/benefits-fade-in.js';
+import { initFadeUp } from './modules/fade-up.js';
 
 // DOM読み込み完了後の処理（統合版）
 document.addEventListener('DOMContentLoaded', function() {
@@ -25,6 +27,12 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // 7. Splide.jsの初期化
   initSplide();
+  
+  // 8. benefits用の横フェードアニメーションの初期化
+  initBenefitsFadeIn();
+  
+  // 9. 汎用的な下からフェードインアニメーションの初期化
+  initFadeUp();
 });
 
 // HubSpotフォーム読み込み完了後にスクロール検知を再初期化

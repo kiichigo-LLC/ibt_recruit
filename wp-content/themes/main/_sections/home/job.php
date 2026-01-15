@@ -1,6 +1,6 @@
 <div class="recruit-home-section">
 
-  <h2 class="recruit-home-section-ttl">
+  <h2 class="recruit-home-section-ttl fade-up">
     <span>募集職種</span>
   </h2>
 
@@ -37,53 +37,53 @@
 
       ?>
 
-        <div class="recruit-home-job-item">
+        <div class="recruit-home-job-item fade-up-stagger">
+          <a href="<?php the_permalink(); ?>">
+            <div class="recruit-home-job-item-img">
+              <?php if($eye_img && $eye_img[0]) { ?>
+                <img src="<?php echo esc_url($eye_img[0]); ?>" alt="<?php echo esc_attr(get_the_title()); ?>" width="512" height="328">
+              <?php } else { ?>
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/public/img/new/recruit/sample1.webp" alt="新卒" width="512" height="328">
+              <?php } ?>
+            </div>  
 
-          <div class="recruit-home-job-item-img">
-            <?php if($eye_img && $eye_img[0]) { ?>
-              <img src="<?php echo esc_url($eye_img[0]); ?>" alt="<?php echo esc_attr(get_the_title()); ?>" width="512" height="328">
-            <?php } else { ?>
-              <img src="<?php echo get_stylesheet_directory_uri(); ?>/public/img/new/recruit/sample1.webp" alt="新卒" width="512" height="328">
-            <?php } ?>
-          </div>  
+            <div class="recruit-home-job-item-ttl">
+              <?php if($tag_name) { ?>
+                <span class="recruit-home-job-item-ttl-tag"><?php echo esc_html($tag_name); ?></span>
+              <?php } ?>
+              <?php if($recruit_title) { ?>
+                <span class="recruit-home-job-item-ttl-main"><?php echo preg_replace('/<br\s*\/?>/i', ' ', $recruit_title); ?></span>
+              <?php } ?>
+            </div>
 
-          <div class="recruit-home-job-item-ttl">
-            <?php if($tag_name) { ?>
-              <span class="recruit-home-job-item-ttl-tag"><?php echo esc_html($tag_name); ?></span>
-            <?php } ?>
-            <?php if($recruit_title) { ?>
-              <span class="recruit-home-job-item-ttl-main"><?php echo preg_replace('/<br\s*\/?>/i', ' ', $recruit_title); ?></span>
-            <?php } ?>
-          </div>
-
-          <div class="recruit-home-job-item-detail">
-            <dl>
-              <?php
-                $recruit_point_role = get_post_meta(get_the_ID(), 'recruit_point_0_recruit_point_role', true);
-                $recruit_point_type = get_post_meta(get_the_ID(), 'recruit_point_0_recruit_point_type', true);
-                $recruit_point_area = get_post_meta(get_the_ID(), 'recruit_point_0_recruit_point_area', true);
-              ?>
-              <?php if ($recruit_point_role) : ?>
-                <div>
-                  <dt>職種</dt>
-                  <dd><?php echo esc_html($recruit_point_role); ?></dd>
-                </div>
-              <?php endif; ?>
-              <?php if ($recruit_point_type) : ?>
-                <div>
-                  <dt>雇用形態</dt>
-                  <dd><?php echo esc_html($recruit_point_type); ?></dd>
-                </div>
-              <?php endif; ?>
-              <?php if ($recruit_point_area) : ?>
-                <div>
-                  <dt>エリア</dt>
-                  <dd><?php echo esc_html($recruit_point_area); ?></dd>
-                </div>
-              <?php endif; ?>
-            </dl>
-          </div>
-
+            <div class="recruit-home-job-item-detail">
+              <dl>
+                <?php
+                  $recruit_point_role = get_post_meta(get_the_ID(), 'recruit_point_0_recruit_point_role', true);
+                  $recruit_point_type = get_post_meta(get_the_ID(), 'recruit_point_0_recruit_point_type', true);
+                  $recruit_point_area = get_post_meta(get_the_ID(), 'recruit_point_0_recruit_point_area', true);
+                ?>
+                <?php if ($recruit_point_role) : ?>
+                  <div>
+                    <dt>職種</dt>
+                    <dd><?php echo esc_html($recruit_point_role); ?></dd>
+                  </div>
+                <?php endif; ?>
+                <?php if ($recruit_point_type) : ?>
+                  <div>
+                    <dt>雇用形態</dt>
+                    <dd><?php echo esc_html($recruit_point_type); ?></dd>
+                  </div>
+                <?php endif; ?>
+                <?php if ($recruit_point_area) : ?>
+                  <div>
+                    <dt>エリア</dt>
+                    <dd><?php echo esc_html($recruit_point_area); ?></dd>
+                  </div>
+                <?php endif; ?>
+              </dl>
+            </div>
+          </a>
         </div>
 
       <?php endwhile; ?>

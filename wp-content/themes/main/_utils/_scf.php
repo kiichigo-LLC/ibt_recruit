@@ -17,5 +17,6 @@
   } else {
     $member_interview_thumnail = $member_interview_thumnail_raw;
   }
+  $recruit_app_source = get_post_meta(get_the_ID(), 'recruit_app_source', true) ?: '';
 ?>
 

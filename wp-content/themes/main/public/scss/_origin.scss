@@ -1,0 +1,29 @@
+/* 変数セット
+------------------------------------------------------------ */
+@use "common" as *;
+
+
+/*
+============================================================
+
+本サイトcssのスタイル引き継ぎ用
+
+============================================================
+*/
+
+.ibt-header-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.home .bgr span:before,
+.bgr span:before {
+  background: url(https://ib-tec.co.jp/wp-content/themes/main/img/new/icon/bgr_b.svg) center no-repeat;
+  background-size: contain;
+}
+
+.bgr span:after {
+  background: url(https://ib-tec.co.jp/wp-content/themes/main/img/new/icon/x.svg) center no-repeat;
+  background-size: contain;
+}

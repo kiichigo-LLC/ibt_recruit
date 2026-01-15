@@ -14,7 +14,7 @@
   .recruit-svg-animation {
     top: 300px;
     @media (max-width: $brake_md) {
-      top: 460  px;
+      top: 416px;
     }
   }
 }
@@ -27,6 +27,9 @@
 
   &.home {
     background: none !important;
+    @media (max-width: $brake_md) {
+      padding-top: 0 !important;
+    }
   }
 
   //-btn
@@ -160,6 +163,13 @@
   //-nav
   &-nav {
     gap: 16px;
+    @media (max-width: $brake_md) {
+      margin-top: 32px;
+      display: flex !important;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 32px;
+    }
     li {
       display: block;
       a {
@@ -167,13 +177,16 @@
         font-weight: 500;
         line-height: 1;
         color: $b0;
+        @media (max-width: $brake_md) {
+          color: $b0 !important;
+        }
         &.cv {
           width: 160px;
           height: 48px;
           font-size: 16px;
           font-weight: 500;
           line-height: 1;
-          color: $w0;
+          color: $w0 !important;
           background-image: url(../img/btnbg.webp);
           background-size: 100%;
           background-position: center center;
@@ -204,7 +217,6 @@
     }
   }
 
-
   &-home {
 
     //-kv
@@ -228,7 +240,7 @@
         @media (max-width: $brake_md) {
           height: 228px;
           margin-top: 0;
-          margin-bottom: 24px;
+          margin-bottom: 0;
         }
         img {
           flex-shrink: 0;
@@ -518,15 +530,17 @@
               gap: 8px;
               margin-top: -20px;
             }
+            .caption-slide-fade-bg {
+              background: $main_clr;
+              padding: 8px 12px;
+              box-sizing: border-box;
+            }
             span {
               font-size: 32px;
               display: inline-block;
               line-height: 1;
               font-weight: 700;
               color: $w0;
-              background: $main_clr;
-              padding: 8px 12px;
-              box-sizing: border-box;
               letter-spacing: 4px;
               @media (max-width: $brake_md) {
                 font-size: 20px;
@@ -551,14 +565,18 @@
     }
 
     &-job {
-      display: flex;
-      justify-content: space-between;
-      align-items: stretch;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      // display: flex;
+      // justify-content: space-between;
+      // align-items: stretch;
       gap: 40px;
       width: 100%;
       position: relative;
       @media (max-width: $brake_md) {
+        display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 24px;
       }
       &-item {
@@ -572,6 +590,13 @@
         border-radius: 10px;
         background: $w0;
         box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.10);
+
+        a {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 16px;
+        }
         &-img {
           width: 100%;
           height: 200px;
@@ -645,7 +670,6 @@
     }
   }
 
-
   //-main
   &-main {
     display: flex;
@@ -693,9 +717,10 @@
         font-weight: 500;
         line-height: 1;
         color: $main_clr;
-        width: 80px;
-        padding: 4px 8px 6px;
-        height: auti;
+        min-width: 80px;
+        width: fit-content;
+        padding: 4px 12px 6px;
+        height: aut0;
         border: 1px solid $main_clr;
         border-radius: 100vmax;
         box-sizing: border-box;
@@ -725,6 +750,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        border-radius: 10px;
       }
     }
     &-list {
@@ -1085,8 +1111,9 @@
               font-weight: 500;
               line-height: 1;
               color: $main_clr;
-              width: 80px;
-              padding: 4px 8px 6px;
+              min-width: 80px;
+              width: fit-content;
+              padding: 4px 12px 6px;
               height: auti;
               border: 1px solid $main_clr;
               border-radius: 100vmax;
@@ -1512,6 +1539,18 @@
       margin-left: calc(-50vw + 50%) !important;
       margin-right: calc(-50vw + 50%) !important;
       width: 100vw !important;
+    }
+  }
+
+  //-apply
+  &-apply {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto 0;
+    box-sizing: border-box;
+    padding: 16px 0 0;
+    @media (min-width: $brake_sm+1) {
+      padding: 24px 0 0;
     }
   }
 }

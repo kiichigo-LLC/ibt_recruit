@@ -7,7 +7,7 @@
       </a>
     </div>
 
-    <div class="ibt-header-nav">
+    <div class="ibt-header-nav opn">
       <?php include(get_template_directory() . '/_common/nav.php'); ?>
     </div>
 

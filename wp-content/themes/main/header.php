@@ -159,9 +159,14 @@ ini_set('display_errors', "On");
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
 
 		<!-- スタイル -->
-		<link rel="stylesheet" href="http://localhost/ibt/wp/wp-content/themes/main/css/newstyle.css?v<?php echo $vcash ?>">
-    <link rel="stylesheet" href="http://localhost/ibt/recruit/wp-content/themes/main/public/css/style.css?v<?php echo $vcash ?>">
-		<!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/public/css/style.css?v<?php echo $vcash ?>"> -->
+		<!-- <link rel="stylesheet" href="http://localhost/ibt/wp/wp-content/themes/main/css/newstyle.css?v<?php echo $vcash ?>">
+    <link rel="stylesheet" href="http://localhost/ibt/recruit/wp-content/themes/main/public/css/style.css?v<?php echo $vcash ?>"> -->
+		
+		<link rel="stylesheet" href="https://ib-tec.co.jp/wp-content/themes/main/css/newstyle.css?v<?php echo $vcash ?>">
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/public/css/style.css?v<?php echo $vcash ?>">
+
+		<link rel="stylesheet" href="http://localhost/ibt/recruit/wp-content/themes/main/public/css/style.css?v<?php echo $vcash ?>">
+		
 		
 		<?php //wp_head(); ?>
 

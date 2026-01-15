@@ -1,0 +1,48 @@
+/* 変数セット
+------------------------------------------------------------ */
+@use "../common" as *;
+
+
+/*
+============================================================
+
+スライドフェードアニメーション
+
+============================================================
+*/
+
+// 画像用：横からフェードイン
+.img-slide-fade {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  
+  &.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// figcaptionの背景用div：横からスライドイン
+.caption-slide-fade-bg {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  
+  &.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// 文字用：横からスライドイン（初期状態は透明）
+.caption-slide-fade-text {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  
+  &.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

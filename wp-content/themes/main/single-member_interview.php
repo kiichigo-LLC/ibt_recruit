@@ -30,38 +30,38 @@
 
     <div class="recruit-member_interview-panel">
       <div class="recruit-member_interview-panel-text">
-        <div class="recruit-member_interview-panel-text-top">
+        <div class="recruit-member_interview-panel-text-top fade-up-stagger">
           <?php echo nl2br(esc_html($member_interview_copy)); ?>
         </div>
         <div class="recruit-member_interview-panel-text-btm">
           <div class="recruit-member_interview-panel-text-btm-group">
             <?php if ($member_interview_panel_group) : ?>
-              <b><?php echo esc_html($member_interview_panel_group); ?></b>
+              <b class="fade-up-stagger"><?php echo esc_html($member_interview_panel_group); ?></b>
             <?php endif; ?>
             <?php if ($member_interview_panel_post) : ?>
-              <span><?php echo esc_html($member_interview_panel_post); ?></span>
+              <span class="fade-up-stagger"><?php echo esc_html($member_interview_panel_post); ?></span>
             <?php endif; ?>
           </div>
           <div class="recruit-member_interview-panel-text-btm-name">
             <?php if ($member_interview_panel_name) : ?>
-              <strong><?php echo esc_html($member_interview_panel_name); ?></strong>
+              <strong class="fade-up-stagger"><?php echo esc_html($member_interview_panel_name); ?></strong>
             <?php endif; ?>
             <?php if ($member_interview_panel_join) : ?>
-              <small><?php echo esc_html($member_interview_panel_join); ?></small>
+              <small class="fade-up-stagger"><?php echo esc_html($member_interview_panel_join); ?></small>
             <?php endif; ?>
           </div>
         </div>
       </div>
-      <div class="recruit-member_interview-panel-img">
+      <div class="recruit-member_interview-panel-img fade-up-stagger">
         <img src="<?php echo esc_url($eye_img[0]); ?>" alt="<?php echo esc_attr(get_the_title()); ?>" width="656" height="328">
       </div>
     </div>
 
     <div class="recruit-member_interview-profile">
-      <div class="recruit-member_interview-profile-cap">
+      <div class="recruit-member_interview-profile-cap fade-up-stagger">
         <span><b>P</b>ROFILE</span>
       </div>
-      <div class="recruit-member_interview-profile-text">
+      <div class="recruit-member_interview-profile-text fade-up-stagger">
         <span>
           <?php echo nl2br(esc_html($member_interview)); ?>
         </span>
@@ -83,13 +83,13 @@
         ?>
           <div class="recruit-member_interview-article-box">
             <?php if ($article_title) : ?>
-              <h2><?php echo esc_html($article_title); ?></h2>
+              <h2 class="fade-up"><?php echo esc_html($article_title); ?></h2>
             <?php endif; ?>
             <?php if ($article_q) : ?>
-              <h3><?php echo esc_html($article_q); ?></h3>
+              <h3 class="fade-up"><?php echo esc_html($article_q); ?></h3>
             <?php endif; ?>
             <?php if ($article_a) : ?>
-              <p><?php echo nl2br(esc_html($article_a)); ?></p>
+              <p class="fade-up"><?php echo nl2br(esc_html($article_a)); ?></p>
             <?php endif; ?>
           </div>
         <?php

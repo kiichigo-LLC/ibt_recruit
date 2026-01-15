@@ -1,6 +1,6 @@
-<div class="recruit-home-section">
+<div class="recruit-home-section" id="environment">
 
-  <h2 class="recruit-home-section-ttl">
+  <h2 class="recruit-home-section-ttl fade-up">
     <span>制度・環境・文化</span>
   </h2>
 
@@ -13,21 +13,21 @@
     <div class="recruit-home-benefits-item">
       <div class="recruit-home-benefits-item-img">
         <figure>
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/public/img/benefits/01.webp" alt="すべてのスタッフに平等に成長のチャンスあり！" width="536" height="304" loading="lazy">
-          <figcaption>
+          <img class="img-slide-fade" src="<?php echo get_stylesheet_directory_uri(); ?>/public/img/benefits/01.webp" alt="すべてのスタッフに平等に成長のチャンスあり！" width="536" height="304" loading="lazy">
+          <figcaption class="caption-slide-fade">
             <span>すべてのスタッフに</span>
             <span>平等に成長のチャンスあり！</span>
           </figcaption>
         </figure>
       </div>
-      <div class="recruit-home-benefits-item-text">
+      <div class="recruit-home-benefits-item-text fade-up">
         <span>
           当社の社員の平均年齢は25歳。個々で仕事をするというよりも、チームで目標達成を目指すスタイルが特徴。部署や役職、職種を越え、みんなで協力し合う風土があります。<br>
           <br>
           また、国籍、年齢、性別、経験に関係なくすべてのメンバーに平等にチャンスを与え、成長の機会を与えるカルチャーが根付いています。<br>
           <br>
           なかには、新卒入社2年目でトッププレイヤーとして活躍しているメンバーや、26歳でチームマネジメントを任されるメンバーも在籍中！<br>
-          活躍できるフィールドはたくさんあるので、自分が「成長したい」と思い、行動することチャンスは巡ってくるでしょう。
+          活躍できるフィールドはたくさんあるので、自分が「成長したい」と思い、行動することでチャンスは巡ってくるでしょう。
         </span>
       </div>
     </div>
@@ -35,14 +35,14 @@
     <div class="recruit-home-benefits-item reverse">
       <div class="recruit-home-benefits-item-img">
         <figure>
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/public/img/benefits/02.webp" alt="すべてのスタッフに平等に成長のチャンスあり！" width="536" height="304" loading="lazy">
-          <figcaption>
+          <img class="img-slide-fade" src="<?php echo get_stylesheet_directory_uri(); ?>/public/img/benefits/02.webp" alt="すべてのスタッフに平等に成長のチャンスあり！" width="536" height="304" loading="lazy">
+          <figcaption class="caption-slide-fade">
             <span>外国籍のメンバーが</span>
             <span>全体の約30%を占めています！</span>
           </figcaption>
         </figure>
       </div>
-      <div class="recruit-home-benefits-item-text">
+      <div class="recruit-home-benefits-item-text fade-up">
         <span>
         オフィスでは、さまざまな言葉が飛び交い、賑やかな雰囲気の職場です。国籍や言語・文化の垣根を超え、日々力を合わせて仕事を行なっています。<br>
         <br>
@@ -56,13 +56,13 @@
     <div class="recruit-home-benefits-item">
       <div class="recruit-home-benefits-item-img">
         <figure>
-          <img src="<?php echo get_stylesheet_directory_uri(); ?>/public/img/benefits/03.webp" alt="すべてのスタッフに平等に成長のチャンスあり！" width="536" height="304" loading="lazy">
-          <figcaption>
+          <img class="img-slide-fade" src="<?php echo get_stylesheet_directory_uri(); ?>/public/img/benefits/03.webp" alt="すべてのスタッフに平等に成長のチャンスあり！" width="536" height="304" loading="lazy">
+          <figcaption class="caption-slide-fade">
             <span>ワークもライフも充実！</span>
           </figcaption>
         </figure>
       </div>
-      <div class="recruit-home-benefits-item-text">
+      <div class="recruit-home-benefits-item-text fade-up">
         <span>
           仕事もプライベートも全力で120％楽しむ。そんなメンバーばかり。<br>
           <br>

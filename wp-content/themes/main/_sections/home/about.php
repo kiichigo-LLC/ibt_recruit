@@ -1,6 +1,6 @@
 <div class="recruit-home-section">
 
-  <h2 class="recruit-home-section-ttl">
+  <h2 class="recruit-home-section-ttl fade-up-stagger">
     <span>わたしたちについて</span>
   </h2>
 
@@ -8,7 +8,7 @@
 
     <div class="recruit-home-about">
       
-      <div class="recruit-home-about-item item1">
+      <div class="recruit-home-about-item item1 fade-up-stagger">
         <a href="<?php echo $parent_home_url; ?>about-us/#vision" target="_blank" rel="noopener noreferrer">
           <div class="recruit-home-about-item-box">
             <div class="recruit-home-about-item-cap">
@@ -24,7 +24,7 @@
         </a>
       </div>
 
-      <div class="recruit-home-about-item item2">
+      <div class="recruit-home-about-item item2 fade-up-stagger">
         <a href="<?php echo $parent_home_url; ?>about-us/#mission" target="_blank" rel="noopener noreferrer">
           <div class="recruit-home-about-item-box">
             <div class="recruit-home-about-item-cap">
@@ -40,7 +40,7 @@
         </a>
       </div>
 
-      <div class="recruit-home-about-item item3">
+      <div class="recruit-home-about-item item3 fade-up-stagger">
         <a href="<?php echo $parent_home_url; ?>about-us/#value" target="_blank" rel="noopener noreferrer">
           <div class="recruit-home-about-item-box">
             <div class="recruit-home-about-item-cap">

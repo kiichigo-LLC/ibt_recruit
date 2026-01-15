@@ -313,6 +313,30 @@ a {
   }
 }
 
+// 汎用的な下からフェードインアニメーション
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  
+  &.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// 遅延付きの下からフェードインアニメーション（順番に表示される）
+.fade-up-stagger {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  
+  &.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;

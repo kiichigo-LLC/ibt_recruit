@@ -33,7 +33,7 @@
 	
 	// jobカテゴリーの場合は専用テンプレートを使用
 	if( $is_job ) {
-		include( get_template_directory() . '/single-recruit.php' );
+		include( get_template_directory() . '/single-job.php' );
 		return;
 	}
 

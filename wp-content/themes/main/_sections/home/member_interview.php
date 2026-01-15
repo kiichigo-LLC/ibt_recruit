@@ -1,6 +1,6 @@
 <div class="recruit-home-section">
 
-  <h2 class="recruit-home-section-ttl">
+  <h2 class="recruit-home-section-ttl fade-up">
     <span>メンバーインタビュー</span>
   </h2>
 
@@ -28,7 +28,7 @@
 
         ?>
 
-          <div class="recruit-category-archive-box">
+          <div class="recruit-category-archive-box fade-up-stagger">
             <a href="<?php the_permalink(); ?>">
               <div class="recruit-category-archive-box-head">
                 <div class="recruit-category-archive-box-copy">

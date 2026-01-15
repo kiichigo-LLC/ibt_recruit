@@ -20,7 +20,7 @@
   <div class="ibt-contents-inr recruit-inr">
     
     <div class="ibt-contents-head recruit-head">
-      <h1 class="recruit-head-ttl">
+      <h1 class="recruit-head-ttl fade-up-stagger">
       MEMBER <br class="nonepc">INTERVIEW
       </h1>
     </div>
@@ -58,7 +58,7 @@
 
           ?>
 
-            <div class="recruit-category-archive-box">
+            <div class="recruit-category-archive-box fade-up-stagger">
               <a href="<?php the_permalink(); ?>">
                 <div class="recruit-category-archive-box-head">
                   <div class="recruit-category-archive-box-copy">

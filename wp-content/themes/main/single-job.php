@@ -50,7 +50,7 @@
   </ol>
 </div>
 
-<div class="recruit-btn-fix fade-up-stagger">
+<div class="recruit-btn-fix">
   <a href="/apply/<?php echo $recruit_app_source ? '?application_position=' . urlencode($recruit_app_source) : ''; ?>">
     <span>応募する</span>
   </a>

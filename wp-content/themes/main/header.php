@@ -152,16 +152,11 @@ ini_set('display_errors', "On");
 		<!-- thumbnail -->
 		<meta name="thumbnail" content="<?php echo $meta_ogp ?>">
 
-		<!-- スタイル -->
+		<!-- Google Fonts -->
 		<link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-		<!-- Splide.js CSS -->
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
 
 		<!-- スタイル -->
-		<!-- <link rel="stylesheet" href="http://localhost/ibt/wp/wp-content/themes/main/css/newstyle.css?v<?php echo $vcash ?>">
-    <link rel="stylesheet" href="http://localhost/ibt/recruit/wp-content/themes/main/public/css/style.css?v<?php echo $vcash ?>"> -->
-		
 		<link rel="stylesheet" href="https://ib-tec.co.jp/wp-content/themes/main/css/newstyle.css?v<?php echo $vcash ?>">
 		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/public/css/style.css?v<?php echo $vcash ?>">
 
@@ -171,7 +166,7 @@ ini_set('display_errors', "On");
 		<?php //wp_head(); ?>
 
 		<!-- 構造化データ -->
-		<?php include('_meta/structured_data.php'); ?>
+		<?php include(get_template_directory() . '/_meta/structured_data.php'); ?>
 
 		<script>
 			window.addEventListener("load", function(){

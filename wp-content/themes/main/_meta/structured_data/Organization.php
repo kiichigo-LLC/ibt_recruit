@@ -1,23 +1,34 @@
 {
-  "@type": [
-    "Organization",
-    "Brand"
-  ],
-  "@id": "https://ib-tec.co.jp/#organization",
-  "name": "<?php echo isset($meta_title) ? esc_js($meta_title) : '' ?>",
+  "@type": "Organization",
+  "@id": "<?php echo esc_url( home_url( '/' ) ); ?>#organization",
+  "name": "インバウンドテクノロジー株式会社",
+  "legalName": "インバウンドテクノロジー株式会社",
+  "alternateName": "Inbound Technology Inc.",
   "url": "<?php echo esc_url( home_url( '/' ) ); ?>",
   "logo": {
     "@type": "ImageObject",
-    "inLanguage": "jp",
     "@id": "<?php echo esc_url( home_url( '/' ) ); ?>#/schema/logo/image/",
-    "url": "https://ib-tec.co.jp/wp-content/themes/main/img/main_logo.svg",
-    "contentUrl": "https://ib-tec.co.jp/wp-content/themes/main/img/main_logo.svg",
+    "url": "<?php echo esc_url( get_template_directory_uri() ); ?>/img/main_logo.svg",
+    "contentUrl": "<?php echo esc_url( get_template_directory_uri() ); ?>/img/main_logo.svg",
     "width": 168,
     "height": 50,
-    "caption": "<?php echo esc_attr('インバウンドテクノロジー株式会社') ?>"
+    "caption": "インバウンドテクノロジー株式会社"
   },
   "image": {
     "@id": "<?php echo esc_url( home_url( '/' ) ); ?>#/schema/logo/image/"
+  },
+  "foundingDate": "2016",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "JP",
+    "addressRegion": "東京都",
+    "addressLocality": "中央区",
+    "streetAddress": "築地2-10-2 JP-BASE築地駅前ビル8階"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+81-3-6420-0580",
+    "contactType": "customer service"
   },
   "sameAs": [
     "https://www.facebook.com/we.are.inbound.technology",
@@ -25,33 +36,7 @@
   ],
   "founder": {
     "@type": "Person",
-    "name": "<?php echo esc_attr('インバウンドテクノロジー') ?>",
-    "url": "https://ib-tec.co.jp/",
-    "sameAs": "https://ib-tec.co.jp/"
+    "name": "林 舟之輔"
   },
-  "foundingDate": "2003-06-20",
-  "numberOfEmployees": 108,
-  "slogan": "WORK WITHOUT BORDERS",
-  "description": "<?php echo isset($meta_description) ? esc_attr($meta_description) : '' ?>",
-  "legalName": "<?php echo esc_attr('インバウンドテクノロジー株式会社') ?>",
-  "parentOrganization": {
-    "@type": "Organization",
-    "name": "<?php echo esc_attr('インバウンドテクノロジー株式会社') ?>",
-    "description": "<?php echo esc_attr('外国人にとって、なくてはならないインフラサービスを起こす。外国人向けの住まいの提供・ホテル・投資・クレジットカードの発行・携帯の発行・SIMの取得など、外国人に必要なインフラを当社がすべて提供できる、プラットフォーム事業を展開しています。') ?>",
-    "url": "https://ib-tec.co.jp/",
-    "sameAs": [
-      "https://ib-tec.co.jp/"
-    ],
-    "logo": "https://ib-tec.co.jp/images/ob_logo.svg"
-  },
-  "memberOf": {
-    "@type": "Organization",
-    "name": "<?php echo esc_attr('インバウンドテクノロジー株式会社') ?>",
-    "description": "<?php echo esc_attr('外国人にとって、なくてはならないインフラサービスを起こす。外国人向けの住まいの提供・ホテル・投資・クレジットカードの発行・携帯の発行・SIMの取得など、外国人に必要なインフラを当社がすべて提供できる、プラットフォーム事業を展開しています。') ?>",
-    "url": "https://ib-tec.co.jp/",
-    "sameAs": [
-      "https://ib-tec.co.jp/"
-    ],
-    "logo": "https://ib-tec.co.jp/wp-content/themes/main/img/main_logo.svg"
-  }
+  "description": "<?php echo isset($meta_sitedescription) ? esc_js($meta_sitedescription) : esc_js('人材派遣・人材紹介事業を展開するインバウンドテクノロジー株式会社の採用サイトです。') ?>"
 }

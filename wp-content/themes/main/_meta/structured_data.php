@@ -2,19 +2,25 @@
 {
 	"@context": "https://schema.org",
 	"@graph": [
-    <?php include('structured_data/Organization.php'); echo ','; ?>
-		<?php include('structured_data/website.php'); echo ','; ?>
-		<?php include('structured_data/WebPage.php'); echo ','; ?>
-    <?php if(is_single()) : ?>
-      <?php include('structured_data/article.php'); echo ','; ?>
-    <?php endif; ?>
-		<?php include('structured_data/BreadcrumbList.php'); //echo ','; ?>
+		<?php include(get_template_directory() . '/_meta/structured_data/Organization.php'); ?>,
+		<?php include(get_template_directory() . '/_meta/structured_data/website.php'); ?>,
+		<?php include(get_template_directory() . '/_meta/structured_data/WebPage.php'); ?>
+		<?php 
+			// 求人投稿の場合はJobPostingを追加
+			if(is_single() && has_category('job')) : 
+			include(get_template_directory() . '/_utils/_scf.php');
+			// $recruit_jsonldが空でない場合のみJobPostingを追加
+			if (!empty($recruit_jsonld)) :
+		?>,
+			<?php include(get_template_directory() . '/_meta/structured_data/JobPosting.php'); ?>
+			<?php endif; ?>
+			<?php 
+				// 記事投稿の場合はArticleを追加
+				elseif(is_single() && !has_category('job')) : 
+			?>,
+			<?php include(get_template_directory() . '/_meta/structured_data/article.php'); ?>
+		<?php endif; ?>,
+		<?php include(get_template_directory() . '/_meta/structured_data/BreadcrumbList.php'); ?>
 	]
 }
 </script>
-
-<?php //include('structured_data/origin.php'); ?>
-
-<?php if(is_home() || is_front_page() || is_page() || is_single() || is_category()) : ?>
-    
-<?php endif; ?>

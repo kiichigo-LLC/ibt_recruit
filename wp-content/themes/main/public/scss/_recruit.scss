@@ -258,6 +258,7 @@
           flex-direction: column;
           align-items: flex-start;
           gap: 80px;
+          margin-top: 16px;
         }
         &-copy {
           width: 540px;
@@ -270,7 +271,7 @@
           svg {
             @media (max-width: $brake_md) {
               width: 100%;
-              height: fit-content;
+              height: auto;
             }
           }
         }
@@ -1528,6 +1529,13 @@
 
   &-middle {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-star t;
+    gap: 0;
+    @media (max-width: $brake_md) {
+      gap: 40px;
+    }
     &-svg {
       transform: scaleY(-1);
       z-index: -1;

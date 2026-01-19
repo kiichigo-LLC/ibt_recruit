@@ -1,0 +1,1 @@
+<?php echo isset($recruit_jsonld) ? $recruit_jsonld : ''; ?>

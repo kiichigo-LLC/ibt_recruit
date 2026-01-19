@@ -1,7 +1,7 @@
 <?php
 
   //キャッシュ管理
-  $vcash = '864565';
+  $vcash = '456789';
 
   //変数受け渡し
   $home_url = esc_url( home_url( '/' ) ); //このWPのURL

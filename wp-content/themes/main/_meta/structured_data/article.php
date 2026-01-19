@@ -1,24 +1,28 @@
 {
   "@type": "Article",
-  "@id": "<?php echo $nowurl ?>#article",
-  "isPartOf": {
-    "@id": "<?php echo $nowurl ?>#webpage"
-  },
+  "@id": "<?php echo esc_url( $nowurl ); ?>#article",
+  "headline": "<?php echo isset($article_title) ? esc_js($article_title) : esc_js( get_the_title() ); ?>",
+  "description": "<?php echo isset($meta_description) ? esc_js($meta_description) : ''; ?>",
+  "url": "<?php echo esc_url( $nowurl ); ?>",
+  "datePublished": "<?php echo get_the_date('c'); ?>",
+  "dateModified": "<?php echo get_the_modified_date('c'); ?>",
   "author": {
-    "@id": "<?php echo esc_url( home_url( '/' ) ); ?>#author",
-    "name": "<?php echo esc_attr('インバウンドテクノロジー株式会社') ?>",
-    "url": "<?php echo esc_url( home_url( '/' ) ); ?>"
+    "@type": "Organization",
+    "@id": "<?php echo esc_url( home_url( '/' ) ); ?>#organization",
+    "name": "インバウンドテクノロジー株式会社"
   },
   "publisher": {
     "@id": "<?php echo esc_url( home_url( '/' ) ); ?>#organization"
   },
-  "headline": "<?php echo isset($meta_title) ? esc_attr($meta_title) : '' ?>",
-  "datePublished": "<?php echo get_the_date(DATE_ISO8601); ?>",
-  "dateModified": "<?php if ( get_the_date() != get_the_modified_time() ){ the_modified_date(DATE_ISO8601); } else { echo get_the_date(DATE_ISO8601); } ?>",
-  "mainEntityOfPage": "<?php echo $nowurl ?>#webpage",
-  "url": "<?php echo $nowurl ?>",
-  "image": {
-    "@id": "<?php echo $nowurl ?>#primaryimage"
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "<?php echo esc_url( $nowurl ); ?>#webpage"
   },
-  "keywords": "<?php echo isset($meta_description) ? esc_attr($meta_description) : '' ?>"
+  "image": {
+    "@type": "ImageObject",
+    "@id": "<?php echo esc_url( $nowurl ); ?>#primaryimage",
+    "url": "<?php echo esc_url( $meta_ogp ); ?>",
+    "caption": "<?php echo isset($article_title) ? esc_js($article_title) : ''; ?>"
+  },
+  "inLanguage": "ja-JP"
 }

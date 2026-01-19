@@ -17,6 +17,11 @@
   } else {
     $member_interview_thumnail = $member_interview_thumnail_raw;
   }
+  $recruit_sec1 = get_post_meta(get_the_ID(), 'recruit_sec1', true) ?: '';
+  $recruit_sec2 = get_post_meta(get_the_ID(), 'recruit_sec2', true) ?: '';
+  $recruit_details = get_post_meta(get_the_ID(), 'recruit_details', true) ?: '';
+  $recruit_details2 = get_post_meta(get_the_ID(), 'recruit_details2', true) ?: '';
   $recruit_app_source = get_post_meta(get_the_ID(), 'recruit_app_source', true) ?: '';
-?>
-
+  $recruit_jsonld = get_post_meta(get_the_ID(), 'recruit_jsonld', true) ?: '';
+  
+  $recruit_jsonld = get_field('recruit_jsonld');

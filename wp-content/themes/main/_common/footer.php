@@ -88,7 +88,7 @@
           <div class="ibt-footer-nav-box-child">
             <ul>
               <li>
-                <a href="https://recruit-ib-tec.com/" target="_blank">採用サイト</a>
+                <a href="https://recruit.ib-tec.co.jp/" target="_blank">採用サイト</a>
               </li>
               <li>
                 <a href="https://www.wantedly.com/companies/wonderwall-inc2" target="_blank">Wantedly</a>

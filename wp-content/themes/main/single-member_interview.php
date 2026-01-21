@@ -89,7 +89,7 @@
               <h3 class="fade-up"><?php echo esc_html($article_q); ?></h3>
             <?php endif; ?>
             <?php if ($article_a) : ?>
-              <p class="fade-up"><?php echo nl2br(esc_html($article_a)); ?></p>
+              <p class="fade-up"><?php echo wp_kses(nl2br($article_a), array('b' => array(), 'br' => array())); ?></p>
             <?php endif; ?>
           </div>
         <?php
